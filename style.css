@@ -1,0 +1,25 @@
+body {
+  background: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.checkbox-container {
+  list-style: none;
+  margin-left: -1em;
+}
+
+.markdown-body ul ul li {
+  margin-top: .25em;
+}
+
+table.diff {
+  width: 100%;
+}
+
+table.diff thead {
+  display: none;
+}
+
+th.author {
+  display: none;
+}

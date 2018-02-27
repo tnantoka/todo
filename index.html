@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsdifflib-dist@1.0.0/diffview.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>#TODO</title>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand navbar-light">
+    <div class="container">
+      <ul class="navbar-nav nav ml-auto">
+        <li class="nav-item px-2">
+          <a class="nav-link active" href="#show" data-toggle="tab">
+            <i class="fas fa-list-ul fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#edit" data-toggle="tab">
+            <i class="fas fa-code fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#history" data-toggle="tab">
+            <i class="fas fa-history fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#help" data-toggle="tab">
+            <i class="fas fa-question fa-fw"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5 py-2">
+    <div class="tab-content">
+      <div class="tab-pane active" id="show">
+        <div class="form-control-plaintext">
+          <div class="markdown-body js-html"></div>
+        </div>
+      </div>
+      <div class="tab-pane" id="edit">
+        <div class="form-group">
+          <textarea class="form-control js-md"></textarea>
+        </div>
+      </div>
+      <div class="tab-pane js-history" id="history">
+      </div>
+      <div class="tab-pane" id="help">
+        <table class="table table-bordered table-sm">
+          <tbody>
+            <tr>
+              <th><kbd>⌘</kbd> + <kbd>s</kbd></th>
+              <td><i class="fas fa-eye fa-fw"></i></td>
+            </tr>
+            <tr>
+              <th><kbd>e</kbd></th>
+              <td><i class="fas fa-pencil-alt fa-fw"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.0/autosize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.15/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/mousetrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/plugins/global-bind/mousetrap-global-bind.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsdifflib-dist@1.0.0/diffview.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsdifflib-dist@1.0.0/difflib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
