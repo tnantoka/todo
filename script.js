@@ -12,6 +12,13 @@ var $html;
 var $md;
 var $history;
 
+var renderer = new marked.Renderer();
+var linkRenderer = renderer.link;
+renderer.link = function (href, title, text) {
+    const html = linkRenderer.call(renderer, href, title, text);
+    return html.replace(/^<a /, '<a target="_blank" ');
+};
+
 $(function() {
   autosize($('textarea'));
 
@@ -87,7 +94,7 @@ function showHistories() {
 }
 
 function renderMarkdown(markdown, readonly) {
-  var rendered = marked(markdown);
+  var rendered = marked(markdown, { renderer });
   var i = 0;
   var replaced = rendered.replace(/<li>\[(:? |x)]/g, function(replacement) {
     var checked = /x/.test(replacement) ? ' checked ' : '';
